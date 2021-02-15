@@ -5,7 +5,7 @@ import org.bukkit.entity.EntityType
 
 class Constants() {
     companion object {
-        public val AGGRESSIVES = arrayListOf<EntityType>(
+        public val AGGRESSIVES = hashSetOf<EntityType>(
             EntityType.BAT,
             EntityType.CAVE_SPIDER,
             EntityType.CREEPER,
@@ -22,12 +22,13 @@ class Constants() {
             EntityType.SKELETON_HORSE
         )
 
-        public val ARTIFICIALS = arrayListOf<Material>(
+        public val ARTIFICIALS = hashSetOf<Material>(
             Material.ACACIA_LOG,
             Material.ACACIA_PLANKS,
             Material.ACACIA_FENCE,
             Material.ACACIA_SLAB,
             Material.ACACIA_STAIRS,
+            Material.ACACIA_LEAVES,
             Material.STRIPPED_ACACIA_LOG,
             Material.STRIPPED_ACACIA_WOOD,
             Material.BIRCH_LOG,
@@ -35,6 +36,7 @@ class Constants() {
             Material.BIRCH_FENCE,
             Material.BIRCH_SLAB,
             Material.BIRCH_STAIRS,
+            Material.BIRCH_LEAVES,
             Material.STRIPPED_BIRCH_LOG,
             Material.STRIPPED_BIRCH_WOOD,
             Material.DARK_OAK_LOG,
@@ -42,6 +44,7 @@ class Constants() {
             Material.DARK_OAK_FENCE,
             Material.DARK_OAK_SLAB,
             Material.DARK_OAK_STAIRS,
+            Material.DARK_OAK_LEAVES,
             Material.STRIPPED_DARK_OAK_LOG,
             Material.STRIPPED_DARK_OAK_WOOD,
             Material.JUNGLE_LOG,
@@ -49,6 +52,7 @@ class Constants() {
             Material.JUNGLE_FENCE,
             Material.JUNGLE_SLAB,
             Material.JUNGLE_STAIRS,
+            Material.JUNGLE_LEAVES,
             Material.STRIPPED_JUNGLE_LOG,
             Material.STRIPPED_JUNGLE_WOOD,
             Material.OAK_LOG,
@@ -56,6 +60,7 @@ class Constants() {
             Material.OAK_FENCE,
             Material.OAK_SLAB,
             Material.OAK_STAIRS,
+            Material.OAK_LEAVES,
             Material.STRIPPED_OAK_LOG,
             Material.STRIPPED_OAK_WOOD,
             Material.SPRUCE_LOG,
@@ -63,6 +68,7 @@ class Constants() {
             Material.SPRUCE_FENCE,
             Material.SPRUCE_SLAB,
             Material.SPRUCE_STAIRS,
+            Material.SPRUCE_LEAVES,
             Material.STRIPPED_SPRUCE_LOG,
             Material.STRIPPED_SPRUCE_WOOD,
             Material.COBBLESTONE,
@@ -125,6 +131,15 @@ class Constants() {
             Material.SMOOTH_SANDSTONE_STAIRS,
             Material.SMOOTH_STONE,
             Material.SMOOTH_STONE_SLAB,
+            Material.POLISHED_ANDESITE,
+            Material.POLISHED_ANDESITE_SLAB,
+            Material.POLISHED_ANDESITE_STAIRS,
+            Material.POLISHED_DIORITE,
+            Material.POLISHED_DIORITE_SLAB,
+            Material.POLISHED_DIORITE_STAIRS,
+            Material.POLISHED_GRANITE,
+            Material.POLISHED_GRANITE_SLAB,
+            Material.POLISHED_GRANITE_STAIRS,
             Material.COARSE_DIRT,
             Material.BLACK_CONCRETE,
             Material.BLUE_CONCRETE,
@@ -141,7 +156,16 @@ class Constants() {
             Material.PURPLE_CONCRETE,
             Material.RED_CONCRETE,
             Material.YELLOW_CONCRETE,
-            Material.WHITE_CONCRETE
+            Material.WHITE_CONCRETE,
+            Material.END_ROD,
+            Material.DRAGON_HEAD,
+            Material.DRAGON_WALL_HEAD,
+            Material.CREEPER_HEAD,
+            Material.CREEPER_WALL_HEAD,
+            Material.PLAYER_HEAD,
+            Material.PLAYER_WALL_HEAD,
+            Material.ZOMBIE_HEAD,
+            Material.ZOMBIE_WALL_HEAD
         )
     }
 }

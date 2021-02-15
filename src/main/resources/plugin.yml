@@ -1,7 +1,9 @@
-version: "0.1.1-SNAPSHOT"
+version: "0.2-SNAPSHOT"
 api-version: "1.15"
 name: "appia"
 main: "net.nachtbeere.minecraft.appia.Appia"
 description: "A Modern Environment for Minecraft Citizen"
 author: "Mirai Kim(github: noxowl)"
 website: "https://github.com/Nachtbeere/Appia"
+softdepend:
+  - kotlin
