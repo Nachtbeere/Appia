@@ -1,9 +1,12 @@
 package net.nachtbeere.minecraft.appia
 
+import org.bukkit.Bukkit
 import org.bukkit.block.BlockFace
 import org.bukkit.entity.EntityType
 import org.bukkit.event.entity.CreatureSpawnEvent
+import org.bukkit.event.entity.EntityDamageByEntityEvent
 import org.bukkit.event.entity.EntityExplodeEvent
+import org.bukkit.event.hanging.HangingBreakByEntityEvent
 
 class Modernizer(event: CreatureSpawnEvent) {
     private val currentEvent: CreatureSpawnEvent = event
@@ -44,9 +47,34 @@ class CreeperTNR(event: EntityExplodeEvent) {
         this.currentEvent.blockList().clear()
     }
 
-    fun tnr(){
+    fun tnr() {
         if (this.isCreeper()) {
             this.clearExplodeList()
+        }
+    }
+}
+
+class ExplodeProof(event: HangingBreakByEntityEvent) {
+    private val currentEvent: HangingBreakByEntityEvent = event
+
+    private fun isCreeper(): Boolean {
+        return if (this.currentEvent.remover != null) {
+            this.currentEvent.remover!!.type == EntityType.CREEPER
+        } else {
+            false
+        }
+    }
+
+    private fun isHanging(): Boolean {
+        return this.currentEvent.entity.type == EntityType.PAINTING ||
+                this.currentEvent.entity.type == EntityType.ITEM_FRAME
+    }
+
+    fun proof() {
+        if (this.isCreeper()) {
+            if (this.isHanging()) {
+                currentEvent.isCancelled = true
+            }
         }
     }
 }

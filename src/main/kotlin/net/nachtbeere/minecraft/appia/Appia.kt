@@ -4,6 +4,9 @@ import java.util.logging.Logger
 import org.bukkit.plugin.java.JavaPlugin
 
 class Appia : JavaPlugin() {
+    companion object {
+        const val packageName = "appia"
+    }
     val consolLogger = Logger.getLogger("Minecraft")
     var listener: AppiaListener? = null
 
