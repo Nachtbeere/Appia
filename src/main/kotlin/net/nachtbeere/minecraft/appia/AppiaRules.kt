@@ -1,10 +1,8 @@
 package net.nachtbeere.minecraft.appia
 
-import org.bukkit.Bukkit
 import org.bukkit.block.BlockFace
 import org.bukkit.entity.EntityType
 import org.bukkit.event.entity.CreatureSpawnEvent
-import org.bukkit.event.entity.EntityDamageByEntityEvent
 import org.bukkit.event.entity.EntityExplodeEvent
 import org.bukkit.event.hanging.HangingBreakByEntityEvent
 
